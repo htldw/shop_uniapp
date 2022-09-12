@@ -3,7 +3,7 @@
             "path" : "pages/home/home",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "首页",
+                // "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -12,7 +12,7 @@
             "path" : "pages/cate/cate",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                // "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -21,7 +21,7 @@
             "path" : "pages/cart/cart",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                // "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -30,7 +30,7 @@
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                // "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -43,7 +43,7 @@
                     "path" : "goods_detail/goods_detail",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    // "navigationBarTitleText": "",
                     "enablePullDownRefresh": false
                 }
                 
@@ -52,7 +52,7 @@
                     "path" : "goods_list/goods_list",
                     "style" :                                                                                    
                 {
-                    "navigationBarTitleText": "",
+                    // "navigationBarTitleText": "",
                     "enablePullDownRefresh": false
                 }
                 
@@ -64,11 +64,10 @@
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "黑马优购",
 		"navigationBarBackgroundColor": "#c00000",
-		"backgroundColor": "#F8F8F8",
+		"backgroundColor": "#ffffff",
 		"app-plus": {
 			"background": "#efeff4"
 		}
-    
 	},
   "tabBar":{
       "selectedColor": "#c00000",
