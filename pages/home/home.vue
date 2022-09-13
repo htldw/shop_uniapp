@@ -1,5 +1,9 @@
 <template>
   <view>
+    <!-- 搜索组件 -->
+    <view class="search-box">
+      <my-search @click="gotoSearch"></my-search>
+    </view>
     <!-- 轮播图 -->
     <swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" circular>
       <swiper-item v-for="(item,index) in swiperList" :key="index">
@@ -28,7 +32,8 @@
           </navigator>
           <!-- 右边图片 -->
           <view class="right-img-box">
-            <navigator class="right-img-item" :url="item2.url" v-for="(item2,index2) in item.product_list" :key="index2" v-if="index2 !== 0">
+            <navigator class="right-img-item" :url="item2.url" v-for="(item2,index2) in item.product_list" :key="index2"
+              v-if="index2 !== 0">
               <image class="floor-right-img" :src="item2.image_src" mode="widthFix"
                 :style="{width:item2.image_width + 'rpx'}"></image>
             </navigator>
@@ -80,7 +85,9 @@
 
       },
       async getFloorList() {
-        const {data: res} = await uni.$http.get('/api/public/v1/home/floordata');
+        const {
+          data: res
+        } = await uni.$http.get('/api/public/v1/home/floordata');
         if (res.meta.status !== 200) return uni.$showMsg()
         res.message.forEach(floor => {
           floor.product_list.forEach(prod => {
@@ -97,6 +104,11 @@
             url: '/pages/cart/cart'
           })
         }
+      },
+      gotoSearch() {
+        uni.navigateTo({
+          url: '/subpkg/search/search'
+        })
       }
     }
   }
@@ -147,5 +159,14 @@
       }
     }
 
+  }
+
+  .search-box {
+    // 设置定位效果为“吸顶”
+    position: sticky;
+    // 吸顶的“位置”
+    top: 0;
+    // 提高层级，防止被轮播图覆盖
+    z-index: 999;
   }
 </style>

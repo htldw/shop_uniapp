@@ -1,5 +1,7 @@
 <template>
   <view>
+    <!-- 使用自定义搜索组件 -->
+    <my-search @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
       <!-- 左侧的滑动区域 -->
       <scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh + 'px'}">
@@ -48,7 +50,7 @@
       // 获取当前系统的信息
       const sysInfo = uni.getSystemInfoSync()
       // 为 wh 窗口可用高度动态赋值
-      this.wh = sysInfo.windowHeight;
+      this.wh = sysInfo.windowHeight -50;
     },
     methods:{
       // 获取 一级分类列表数据
@@ -62,7 +64,7 @@
       async getCateLevel2(){
         const {data:res} = await uni.$http.get('/api/public/v1/categories')
         if(res.meta.status!==200) return uni.$showMsg()
-        console.log(res);
+        // console.log(res);
         this.cateLevel2 = res.message[0].children
       },
       // 点击一级分类时
@@ -75,6 +77,11 @@
       gotoGoodsList(item3){
         uni.navigateTo({
         url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
+        })
+      },
+      gotoSearch(){
+        uni.navigateTo({
+          url:'/subpkg/search/search'
         })
       }
     }
