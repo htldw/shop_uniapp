@@ -68,7 +68,7 @@
         })
         if (res.meta.status !== 200) return uni.$showMsg('')
         this.searchResults = res.message
-        console.log(res);
+        // console.log(res);
         if(res.message.length === 0){
           return uni.$showMsg('暂无该商品！')
         }
