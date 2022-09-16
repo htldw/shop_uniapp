@@ -66,8 +66,12 @@
         } = await uni.$http.get('/api/public/v1/goods/qsearch', {
           query: this.kw
         })
-        if (res.meta.status !== 200) return uni.$showMsg()
+        if (res.meta.status !== 200) return uni.$showMsg('')
         this.searchResults = res.message
+        console.log(res);
+        if(res.message.length === 0){
+          return uni.$showMsg('暂无该商品！')
+        }
         this.SaveSearchHistory()
       },
       // 保存搜索关键词为历史记录
