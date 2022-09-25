@@ -48,7 +48,11 @@
 </template>
 
 <script>
+  // 导入自己封装的 mixin 模块
+  import badgeMix from '@/mixins/tabbar-badge.js'
   export default {
+    // 将 badgeMix 混入到当前的页面中进行使用(购物车右上角标识)
+    mixins: [badgeMix],
     data() {
       return {
         // 轮播图数据
@@ -89,6 +93,7 @@
           data: res
         } = await uni.$http.get('/api/public/v1/home/floordata');
         if (res.meta.status !== 200) return uni.$showMsg()
+        console.log(res);
         res.message.forEach(floor => {
           floor.product_list.forEach(prod => {
             prod.url = '/subpkg/goods_list/goods_list?' + prod.navigator_url.split('?')[1]

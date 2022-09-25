@@ -1,7 +1,7 @@
 <template>
 
   <view class="goods-list">
-    <view v-for="(item,index) in goodsList" :key="index" @click="gotoDetail(item)">
+    <view v-for="(item,index) in goodsList" :key="index">
       <my-goods :goods="item"></my-goods>
     </view>
   </view>
@@ -54,12 +54,7 @@
         this.total = res.message.total
         // console.log(this.goods_list);
       },
-      // 点击跳转到商品详情页面
-      gotoDetail(item) {
-       uni.navigateTo({
-         url:'/subpkg/goods_detail/goods_detail?goods_id=' + item.goods_id
-       })
-      }
+      
     },
     onLoad(options) {
       // console.log(options);

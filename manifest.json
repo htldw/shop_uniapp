@@ -55,6 +55,12 @@
             "urlCheck" : true,
             "checkSiteMap": false
         },
+          "requiredPrivateInfos":[
+            
+            // "choosePoi",
+            "chooseAddress"
+          ],
+
         "usingComponents" : true
     },
     "vueVersion" : "2"
