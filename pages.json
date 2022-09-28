@@ -74,7 +74,26 @@
             }
             
             }
-        ]
+            ,{
+                    "path" : "goods_orders/goods_orders",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "我的订单",
+                    "enablePullDownRefresh": false
+                    
+                }
+                
+                }
+                ,{
+                    "path" : "goods_pay/goods_pay",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "我的订单",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
   }
 ],
 	"globalStyle": {

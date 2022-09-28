@@ -6,7 +6,7 @@
     <view class="goods-item" >
       <!-- 商品左侧图片区域 -->
       <view class="goods-item-left">
-        <radio :checked="goods.goods_state" color="#C00000" v-if="showRadio" @click="radioClickHandler"></radio>
+        <radio class="radio" :checked="goods.goods_state" color="#C00000" v-if="showRadio" @click="radioClickHandler"></radio>
         <image class="goods-pic" :src="goods.goods_small_logo || defaultPic" mode="" ></image>
       </view>
       <!-- 商品右侧信息区域 -->
@@ -54,7 +54,7 @@
       return {
 
         // 默认的图片，防止图片缺失时，该位置没有图片
-        defaultPic: 'https://tuchuangs.com/imgs/2022/09/14/3191d4c8d9f04efb.webp'
+        defaultPic: '../../../../static/image/3.webp'
       }
     },
     methods: {
@@ -109,7 +109,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-       radio{
+       .radio{
          z-index: 4;
        }
         .goods-pic {
@@ -139,9 +139,9 @@
           font-size: 16px;
           color: #c00000;
         }
-    uni-number-box{
-      z-index: 4;
-    }
+        uni-number-box{
+          z-index: 4;
+        }
       }
     }
     // 遮罩层 

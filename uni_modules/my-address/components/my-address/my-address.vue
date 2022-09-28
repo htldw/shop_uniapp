@@ -9,15 +9,15 @@
     <view class="address-info-box" v-else @click="chooseAddress">
       <view class="row1">
         <view class="row1-left">
-          <view class="username">收货人：<text>{{address.userName}}</text></view>
+          <view class="username"><text>{{address.userName}}</text></view>
         </view>
         <view class="row1-right">
-          <view class="phone">电话：<text>{{address.telNumber}}</text></view>
+          <view class="phone"><text>{{address.telNumber}}</text></view>
           <uni-icons type="arrowright" size="16"></uni-icons>
         </view>
       </view>
       <view class="row2">
-        <view class="row2-left">收货地址：</view>
+        <view class="row2-left"></view>
         <view class="row2-right">{{addstr}} </view>
       </view>
     </view>
@@ -133,7 +133,7 @@
 
   // 渲染收货信息的盒子
   .address-info-box {
-    font-size: 12px;
+    font-size: 14px;
     height: 90px;
     display: flex;
     flex-direction: column;

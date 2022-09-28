@@ -9,6 +9,8 @@ export default {
     cart: JSON.parse(uni.getStorageSync('cart') || '[]'),
 	// 登录成功之后的 token 字符串
     token: '',
+    // 订单数据
+    goods_order:JSON.parse(uni.getStorageSync('goods_order') || '[]'),
   }),
   // 模块的 mutations 方法
   mutations: {
@@ -18,7 +20,7 @@ export default {
       const findResult = state.cart.find((x) => x.goods_id === goods.goods_id)
       // 如果购物车中没有这件商品，则直接 push
       if (!findResult) {
-        state.cart.push(goods)
+        state.cart.unshift(goods)
       }
       // 如果购物车中有这件商品，则只更新数量即可
       else {
@@ -65,18 +67,36 @@ export default {
 	  state.cart.forEach(x => x.goods_state = newState)
 	  // 持久化存储到本地
 	  this.commit('m_cart/saveToStorage')
-	}
+	},
+  // 添加订单信息
+  addOrder(state,orders){
+    // 如果不存在，则 findResult 为 undefined；否则，为查找到的商品信息对象
+    // state.goods_order = orders
+    // console.log(state.goods_order);
+    state.goods_order.unshift(orders)
+    // 如果不存在，则 findResult 为 undefined；否则，为查找到的商品信息对象
+    // const findResult = state.goods_order.find((x) => x.order_id === orders.order_id)
+    // // 如果购物车中没有这件商品，则直接 push
+    // if (findResult) {
+    //   state.goods_order.push(orders)
+    // }
+    // 持久化存储到本地
+    this.commit('m_cart/saveOrderStorage')
+  },   // 存储订单
+    saveOrderStorage(state) {
+      uni.setStorageSync('goods_order', JSON.stringify(state.goods_order))
+    },
   },
   // 模块的 getters 属性
   getters: {
     // 统计购物车中商品的总数量
     total(state) {
-      // let c = 0
-      // // 循环统计商品的数量，累加到变量 c 中
-      // state.cart.forEach(goods => c += goods.goods_count)
-      // return c
+      let c = 0
+      // 循环统计商品的数量，累加到变量 c 中
+      state.cart.forEach(goods => c += goods.goods_count)
+      return c
        
-       return state.cart.reduce((total,item)=>total += item.goods_count,0)
+       // return state.cart.reduce((total,item)=>total += item.goods_count,0)
       
     },
 	// 勾选的商品的总数量

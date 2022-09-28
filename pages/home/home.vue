@@ -93,7 +93,7 @@
           data: res
         } = await uni.$http.get('/api/public/v1/home/floordata');
         if (res.meta.status !== 200) return uni.$showMsg()
-        console.log(res);
+        // console.log(res);
         res.message.forEach(floor => {
           floor.product_list.forEach(prod => {
             prod.url = '/subpkg/goods_list/goods_list?' + prod.navigator_url.split('?')[1]

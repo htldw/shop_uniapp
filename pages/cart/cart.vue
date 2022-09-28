@@ -18,7 +18,9 @@
       </block>
     </uni-swipe-action>
     <!-- 结算区域 -->
-    <my-settle></my-settle>
+    <view class="my-settle">
+      <my-settle></my-settle>
+    </view>
   </view>
   <!-- 空白购物车区域 -->
   <view class="empty-cart" v-else>
@@ -50,9 +52,12 @@
         }]
       };
     },
-    onLoad() {
-
-    },
+   onLoad() {
+     // 获取当前系统的信息
+     const sysInfo = uni.getSystemInfoSync()
+     // 为 wh 窗口可用高度动态赋值
+     this.wh = sysInfo.windowHeight  + 200;
+   },
     methods: {
       ...mapMutations('m_cart', ['updateGoodsState', 'updateGoodsCount', 'removeGoodsById']),
       // 商品的勾选状态发生了变化
@@ -93,6 +98,11 @@
     .cart-title-text {
       margin-left: 10px;
     }
+  }
+  .my-settle{
+    height: 50px;
+    // margin-top: 100px;
+    // background-color: red;
   }
 
   .empty-cart {
