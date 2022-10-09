@@ -1,5 +1,5 @@
 {
-    "name" : "uni-shop",
+    "name" : "黑马优购",
     "appid" : "__UNI__B74F6B7",
     "description" : "",
     "versionName" : "1.0.0",
@@ -49,18 +49,15 @@
     "quickapp" : {},
     /* 快应用特有相关 */
     "mp-weixin" : {
-        /* 小程序特有相关 */
         "appid" : "wx2e1675245a777575",
         "setting" : {
             "urlCheck" : true,
-            "checkSiteMap": false
+            "checkSiteMap" : false
         },
-          "requiredPrivateInfos":[
-            
+        "requiredPrivateInfos" : [
             // "choosePoi",
             "chooseAddress"
-          ],
-
+        ],
         "usingComponents" : true
     },
     "vueVersion" : "2"

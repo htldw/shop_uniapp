@@ -54,7 +54,7 @@
       return {
 
         // 默认的图片，防止图片缺失时，该位置没有图片
-        defaultPic: '../../../../static/image/3.webp'
+        defaultPic: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg12.360buyimg.com%2Fn12%2Fs400x400_jfs%2Ft1%2F154854%2F6%2F21178%2F141503%2F603f4372E81ffc866%2Fa94c81730a3ae289.jpg&refer=http%3A%2F%2Fimg12.360buyimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667003644&t=0bb61d95af1cb63ead3fcf7247535c0a'
       }
     },
     methods: {

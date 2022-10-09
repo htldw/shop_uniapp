@@ -81,19 +81,19 @@
         defaultPic: [
 
           {
-            url: '../../static/image/1.webp'
+            url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fy.zdmimg.com%2F202209%2F20%2F632933be0a39c5684.jpg_d250.jpg&refer=http%3A%2F%2Fy.zdmimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667003704&t=df8b16d90660f0701e4550aba222fb3f'
           },
           {
-            url: '../../static/image/2.webp'
+            url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fy.zdmimg.com%2F202209%2F26%2F63310f064fefe418.png_d250.jpg&refer=http%3A%2F%2Fy.zdmimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667003704&t=ebfc2110f260f446e9d11b1106c8f73e'
           },
           {
-            url: '../../static/image/3.webp'
+            url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg12.360buyimg.com%2Fn12%2Fs400x400_jfs%2Ft1%2F154854%2F6%2F21178%2F141503%2F603f4372E81ffc866%2Fa94c81730a3ae289.jpg&refer=http%3A%2F%2Fimg12.360buyimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667003704&t=12c6b31f44d0aee0ea8d5f286328bedc'
           },
           {
-            url: '../../static/image/4.webp'
+            url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg12.360buyimg.com%2Fn12%2Fs400x400_jfs%2Ft1%2F145918%2F7%2F19759%2F97052%2F5fe32baeE678a203f%2F106a44f6c04370c0.jpg&refer=http%3A%2F%2Fimg12.360buyimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667003704&t=1e687e9a4d001899a590a4e0da045b87'
           },
           {
-            url: '../../static/image/5.webp'
+            url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg12.360buyimg.com%2Fn1%2Fjfs%2Ft1%2F53682%2F20%2F18965%2F80276%2F62a944a3E2cd83262%2F8f9fe3f5ca81e21f.jpg&refer=http%3A%2F%2Fimg12.360buyimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667003704&t=a7b932889b5d940e0d164ccb1722db85'
           }
         ],
 
